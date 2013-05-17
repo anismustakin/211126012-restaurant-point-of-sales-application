@@ -20,7 +20,7 @@ As a person can be either a employee or customer. A Specialization hierarchy wit
 
 The *Employee* also becomes a supertype as a employee can either be a delivery person or a manager with admin rights. The same disjoint relationship and completeness constraints were applied here as with *Person*. Where a *Employee* is either a *DeliveryPerson* or a *ManagerAdmin*, but cannot be both. 
 
-The *Customer* entity class is now be associated with two other Entities. The *Customer* Entity first has a 1:M relationship with *CreditCard* because a customer can have different credit cards he pays with when deciding to make a online payment for the order. 
+The *Customer* entity class is also associated with two other Entities. The *Customer* Entity first has a 1:M relationship with *CreditCard* because a customer can have different credit cards he pays with when deciding to make a online payment for the order. 
 
 The *Customer* Entity then has a 1:M relationship with *Orders* as one customer will place multiple orders, but a order will only be associated with one customer thus the navigability goes in both directions. For each order a invoice will be issued and thus *Order* is associated with *CustomerInvoice* in a 1:1 relationship. 
 
