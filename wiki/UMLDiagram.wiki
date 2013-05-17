@@ -5,7 +5,7 @@
 Add your content here.
 
 http://commons.wikimedia.org/wiki/File:UML_Diagram_for_a_Online_Restaurant.png
-[http://commons.wikimedia.org/wiki/UML_Diagram_for_a_Online_Restaurant.png]
+[http://code.google.com/ http://commons.wikimedia.org/wiki/UML_Diagram_for_a_Online_Restaurant.png]
 
 
 
