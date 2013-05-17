@@ -33,4 +33,4 @@ Our Restaurant also promotes combo meals so that their customers can save money.
 We also have to keep track of the stock as we will not be storing ready made burgers and pizza, but instead the ingredients will be stored separately. Thus one food item e.g. a burger will consist of a bun, patty, lettuce, tomato, chips, sauce etc. which are all separate stock items. Now as a stock item can belong to many food items and a food item can be associated with many stock items. This would cause a M:M relationship, which we would like to avoid. So we create a weak entity. I created a weak entity called *FoodItemContent* which connects with a 1:M Relationship between *FoodItem* and *StockItems*. 
 
 ==Additional Questions that I still need to answer in regards to my diagram==
-* relationship between ComboMeals and FoodItem?
+ * relationship between ComboMeals and FoodItem?
