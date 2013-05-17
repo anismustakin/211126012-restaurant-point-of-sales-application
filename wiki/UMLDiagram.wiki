@@ -6,7 +6,7 @@
 ==This is a UML Illustration for the Online Restaurant Application==
 
 
-[http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UML_Diagram_for_a_Online_Restaurant.png/800px-UML_Diagram_for_a_Online_Restaurant.png]
+[http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Updated_UML_Diagram.png/800px-Updated_UML_Diagram.png]
 
 
 
