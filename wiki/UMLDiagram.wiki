@@ -4,12 +4,10 @@
 
 Add your content here.
 
-
+[https://docs.google.com/file/d/0B0FoVMOv_k9YTnpYTktCTGRIQk0/edit?usp=sharing&nonsense=something_that_ends_with.png]
 = Details =
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
-[https://docs.google.com/file/d/0B0FoVMOv_k9YTnpYTktCTGRIQk0/edit?usp=sharing&nonsense=something_that_ends_with.png]
