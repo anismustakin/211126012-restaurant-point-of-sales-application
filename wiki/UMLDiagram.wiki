@@ -4,10 +4,10 @@
 
 Add your content here.
 
+http://commons.wikimedia.org/wiki/File:UML_Diagram_for_a_Online_Restaurant.png
 
 
-
-[[Image:http://commons.wikimedia.org/wiki/File:UML_Diagram_for_a_Online_Restaurant.png|thumb|left|Map of 2 Long Street]]
+[[Image:UML_Diagram_for_a_Online_Restaurant.png|thumb|left|Map of 2 Long Street]]
 
 
 = Details =
