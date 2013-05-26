@@ -5,10 +5,13 @@
 package com.linda.restaurantsalesapplication.domain;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -20,7 +23,49 @@ public class Customer implements Serializable, Person{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String customerNo;
+    private Name name;
+    @OneToOne
+    private PersonAddress address;
+    private Demographic demographic;
+    private Contact contact;
+    @OneToOne
+    private Logins logins;
+    @OneToMany
+    private List<CreditCards> cards;
+    @OneToMany
+    private List<Orders> orders;
 
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
+    }
+    
+    
+
+    public List<CreditCards> getCards() {
+        return cards;
+    }
+
+    public void setCards(List<CreditCards> cards) {
+        this.cards = cards;
+    }
+    
+    
+
+    public String getCustomerNo() {
+        return customerNo;
+    }
+
+    public void setCustomerNo(String customerNo) {
+        this.customerNo = customerNo;
+    }
+
+    
+    
     public Long getId() {
         return id;
     }
@@ -56,27 +101,27 @@ public class Customer implements Serializable, Person{
 
     @Override
     public Name getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return name;
     }
 
     @Override
     public Contact getContact() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return contact;
     }
 
     @Override
     public PersonAddress getAddress() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return address;
     }
 
     @Override
     public Demographic getDemographic() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return demographic;
     }
 
     @Override
     public Logins getLogins() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return logins;
     }
     
 }
