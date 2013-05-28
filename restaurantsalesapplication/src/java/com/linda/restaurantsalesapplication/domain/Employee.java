@@ -8,7 +8,9 @@ package com.linda.restaurantsalesapplication.domain;
  *
  * @author linda
  */
-public interface Employee {
-    public Person getPerson();
+public interface Employee extends Person{
+    public String getEmpID();
+  //  public DeliveryPerson getPerson();
+   // public ManagerAdmin getManager();
     
 }

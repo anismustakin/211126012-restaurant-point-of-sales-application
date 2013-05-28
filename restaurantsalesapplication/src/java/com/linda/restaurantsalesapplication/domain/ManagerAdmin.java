@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -21,9 +22,15 @@ public class ManagerAdmin implements Serializable, Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private Name name;
+    @OneToOne
+    private PersonAddress address;
+    private Demographic demographic;
+    private Contact contact;
+    @OneToOne
+    private Logins logins;
     
-    
-    private Person person;
+    private String empid;
     private BigDecimal salary;
 
     public BigDecimal getSalary() {
@@ -69,9 +76,45 @@ public class ManagerAdmin implements Serializable, Employee {
         return "com.linda.restaurantsalesapplication.domain.ManagerAdmin[ id=" + id + " ]";
     }
 
+//    @Override
+//    public DeliveryPerson getPerson() {
+//        return null;
+//    }
+//    
+//    @Override
+//    public ManagerAdmin getManager() {
+//        return new ManagerAdmin();
+//    }
+
     @Override
-    public Person getPerson() {
-        return person;
+    public Name getName() {
+        return name;
     }
-    
+
+    @Override
+    public Contact getContact() {
+        return contact;
+    }
+
+    @Override
+    public PersonAddress getAddress() {
+        return address;
+    }
+
+    @Override
+    public Demographic getDemographic() {
+        return demographic;
+    }
+
+    @Override
+    public Logins getLogins() {
+       return logins;
+    }
+
+    @Override
+    public String getEmpID() {
+        return empid;
+    }
+
+  
 }

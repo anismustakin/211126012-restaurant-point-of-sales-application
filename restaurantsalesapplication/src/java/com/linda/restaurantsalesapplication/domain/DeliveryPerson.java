@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -22,7 +23,14 @@ public class DeliveryPerson implements Serializable, Employee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    private Person person;
+    private String empid;
+    private Name name;
+    @OneToOne
+    private PersonAddress address;
+    private Demographic demographic;
+    private Contact contact;
+    @OneToOne
+    private Logins logins;
     private BigDecimal hourlyWage;
     private BigDecimal hours;
     private BigDecimal tips;
@@ -87,9 +95,37 @@ public class DeliveryPerson implements Serializable, Employee {
         return "com.linda.restaurantsalesapplication.domain.DeliveryPerson[ id=" + id + " ]";
     }
 
-    @Override
-    public Person getPerson() {
-        return person;
+  
+
+      @Override
+    public Name getName() {
+        return name;
     }
+
+    @Override
+    public Contact getContact() {
+        return contact;
+    }
+
+    @Override
+    public PersonAddress getAddress() {
+        return address;
+    }
+
+    @Override
+    public Demographic getDemographic() {
+        return demographic;
+    }
+
+    @Override
+    public Logins getLogins() {
+       return logins;
+    }
+
+    @Override
+    public String getEmpID() {
+        return empid;
+    }
+
     
 }
