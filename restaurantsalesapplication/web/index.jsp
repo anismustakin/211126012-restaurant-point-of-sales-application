@@ -4,6 +4,8 @@
     Author     : linda
 --%>
 
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,4 +16,10 @@
     <body>
         <h1>Changed</h1>
     </body>
+    
+    <h1>Payments</h1>
+    <c:forEach var="payments" items="${payments}">
+        ${payments.amount}
+    </c:forEach>
+    
 </html>
