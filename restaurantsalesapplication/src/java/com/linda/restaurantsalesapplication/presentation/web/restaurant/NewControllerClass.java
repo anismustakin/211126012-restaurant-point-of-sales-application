@@ -26,7 +26,7 @@ public class NewControllerClass {
         //Chapter 8 in NOTES need web.xml file under public in WEB-INF
         //must also still add the facade
         //app config will have the servlet-context.xml - there is a line you need to change to reflect ur project
-        
+        //add.jsp shows the POST method and the University Controller shows how post works
         List<Payment> payments = data.getPaymentCrudService().findAll();
         BigDecimal amount = new BigDecimal("0.00");
         //now can iterate through and add the amounts
