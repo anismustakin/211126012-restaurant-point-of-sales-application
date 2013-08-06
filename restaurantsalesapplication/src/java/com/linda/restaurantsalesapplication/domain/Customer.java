@@ -6,6 +6,7 @@ package com.linda.restaurantsalesapplication.domain;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,16 +19,19 @@ import javax.persistence.OneToOne;
  * @author 211126012
  */
 @Entity
-public class Customer implements Serializable, Person{
+public class Customer implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String customerNo;
+    @Embedded
     private Name name;
     @OneToOne
     private PersonAddress address;
+    @Embedded
     private Demographic demographic;
+    @Embedded
     private Contact contact;
     @OneToOne
     private Logins logins;
@@ -42,6 +46,46 @@ public class Customer implements Serializable, Person{
 
     public void setOrders(List<Orders> orders) {
         this.orders = orders;
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
+    }
+
+    public PersonAddress getAddress() {
+        return address;
+    }
+
+    public void setAddress(PersonAddress address) {
+        this.address = address;
+    }
+
+    public Demographic getDemographic() {
+        return demographic;
+    }
+
+    public void setDemographic(Demographic demographic) {
+        this.demographic = demographic;
+    }
+
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
+
+    public Logins getLogins() {
+        return logins;
+    }
+
+    public void setLogins(Logins logins) {
+        this.logins = logins;
     }
     
     
@@ -99,29 +143,6 @@ public class Customer implements Serializable, Person{
         return "com.linda.restaurantsalesapplication.domain.Customer[ id=" + id + " ]";
     }
 
-    @Override
-    public Name getName() {
-        return name;
-    }
-
-    @Override
-    public Contact getContact() {
-       return contact;
-    }
-
-    @Override
-    public PersonAddress getAddress() {
-        return address;
-    }
-
-    @Override
-    public Demographic getDemographic() {
-       return demographic;
-    }
-
-    @Override
-    public Logins getLogins() {
-        return logins;
-    }
+    
     
 }
