@@ -15,10 +15,12 @@
         <h1>You have reached the Menu Page</h1>
         <h1> Menu Items</h1>
         <p>There are ${count} menu items</p>
-    <c:forEach var="menu" items="${menuss}" >
+        <%--
+    <c:forEach var="menu" items="${menus}" >
         
         ${menus}
         
     </c:forEach>
+        --%>
     </body>
 </html>
