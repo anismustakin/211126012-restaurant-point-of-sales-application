@@ -4,13 +4,13 @@
  */
 package com.linda.restaurantsalesapplication.repository.jpa;
 
-import com.linda.restaurantsalesapplication.repository.GenericDAO;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 import org.springframework.stereotype.Repository;
+import com.linda.restaurantsalesapplication.repository.GenericDAO;
 
 /**
  *
