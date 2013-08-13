@@ -4,7 +4,7 @@
  */
 package com.linda.restaurantsalesapplication.app.factories;
 
-import com.linda.restaurantsalesapplication.domain.Customer;
+
 import com.linda.restaurantsalesapplication.domain.CustomerInvoice;
 import com.linda.restaurantsalesapplication.domain.FoodCategory;
 import com.linda.restaurantsalesapplication.domain.FoodItem;
@@ -14,7 +14,7 @@ import com.linda.restaurantsalesapplication.domain.Orders;
 import com.linda.restaurantsalesapplication.domain.StockItems;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
+
 
 /**
  *
@@ -22,14 +22,11 @@ import java.util.List;
  */
 public class OrderFactory 
 {
-    public static Orders getOrders(int OrderNumber, Date orderDate, Customer cust, CustomerInvoice custInv, List<OrderItem> items)
+    public static Orders getOrders(int OrderNumber, Date orderDate)
     {
         Orders orders = new Orders();
         orders.setOderNumber(OrderNumber);
         orders.setOrderDate(orderDate);
-        orders.setCustomer(cust);
-        orders.setCustomerInvoice(custInv);
-        orders.setItems(items);
         return orders;
     }
     
@@ -50,14 +47,14 @@ public class OrderFactory
         
     }
     
-    public static FoodItem getFoodItem(String name, int invent, int sales, BigDecimal price, List<FoodItemContent> contents)
+    public static FoodItem getFoodItem(String name, int invent, int sales, BigDecimal price)
     {
         FoodItem item = new FoodItem();
         item.setItemName(name);
         item.setInventory(invent);
         item.setSales(sales);
         item.setPrice(price);
-        item.setContents(contents);
+   
         return item;
         
     }
