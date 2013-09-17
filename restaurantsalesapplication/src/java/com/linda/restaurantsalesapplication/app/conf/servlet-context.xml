@@ -13,7 +13,7 @@
  
     <!-- Scans within the base package of the application for @Components to configure as beans -->
     <!-- @Controller, @Service, @Configuration, etc. -->
-    <context:component-scan base-package="com.linda.restaurantsalesapplication" />
+    <context:component-scan base-package="com.linda.restaurantsalesapplication.client" />
     
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
     
